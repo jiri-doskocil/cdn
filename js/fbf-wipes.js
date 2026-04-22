@@ -34,7 +34,7 @@ new Swiper('.reviews-wrapper', {
 //Reviews HP
 document.addEventListener('DOMContentLoaded', function () {
     const starContainers = document.querySelectorAll('.review-stars');
-    const starImage = '/user/documents/upload/hvezda-bila.png'; // uprav si cestu k obrázku
+    const starImage = 'https://cdn.doskocil.online/img/fbf-wipes/hvezda-bila.svg';
 
     starContainers.forEach(container => {
       const rating = parseInt(container.dataset.rating, 10) || 0;
