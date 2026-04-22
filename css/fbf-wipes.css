@@ -1,1 +1,451 @@
+/* === ZÁHLAVÍ === */
+/* Sticky hlavička */
+@media (min-width: 768px) {
+  #header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    transition: background-color 0.3s ease;top: 0;
+  }
+  
+  .navigation-in, .navigation-buttons a[data-target=search], .navigation-buttons a[data-target=search]:hover, :where(body.ums_a11y_login--on) .top-nav-button-login {
+    background-color: transparent !important;
+  }
+ 
+  html.scrolled #header {
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
 
+/* Úpravy header */
+#header .header-top .header-top-wrapper>div:not(.header-bottom) {
+  flex-grow: unset; width: unset;
+}
+
+#header .header-top .header-top-wrapper>div.header-bottom {
+  flex: 1; order: 1;
+}
+
+#header .header-top .navigation-wrapper .site-name {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  order: 1;
+  padding: 0;
+  text-align: left;
+}
+
+#header .header-top .navigation-wrapper .navigation-buttons {
+  order: 2;
+}
+
+#header .header-top .navigation-wrapper .navigation-tools {
+  order: 3;
+  position: relative;
+  width: auto;
+  z-index: 100;
+}
+
+#header .header-top .header-top-wrapper .site-name a img, #header .header-top .header-top-wrapper h1.site-name a img {
+  padding-top: 10px;
+}
+
+.site-name {
+  flex-grow: 0 !important;
+  display: none !important; /* Skrytí loga v hlavičce */
+}
+
+@media (min-width: 768px) {
+  #header .header-top .header-top-wrapper .site-name{
+    width: auto;
+  }
+}
+
+.navigation-in ul li a b {
+  font-weight: 700;
+}
+
+.top-nav-button-login {
+  background-color: transparent;
+}
+
+.btn.btn-icon, a.btn.btn-icon {
+  margin-top: 0px !important;
+}
+
+/* Posunutí widgetu pro výběr jazyka */
+@media (min-width: 768px) {
+  .languagesMenu .languagesMenu__box ul.languagesMenu__list, .navigation-tools .dropdown ul.dropdown-menu {
+    left: auto;right: 0;
+  }
+}
+
+
+/* === BANNERY === */
+/* Carousel */
+.carousel .extended-banner-texts {
+  background-color: transparent;
+  padding-top: 0 !important;
+}
+
+.carousel .extended-banner-texts .extended-banner-title {
+  font-size: 36px;
+}
+
+.carousel .extended-banner-texts .extended-banner-link:hover {
+  color: #000;
+}
+
+@media (max-width: 767px) {
+  .carousel .extended-banner-texts .extended-banner-title {
+    font-size: 30px;
+  }
+}
+
+/* Podbarvení bannerových pozic */
+.banner-category, .homepage-banners-full-width, .homepage-latest-contribution-full-width, .store-rating-full-width {
+  background-color: #ffffff;
+}
+
+/* Banner naše produkty */
+.hp-products {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #F2F2F2;
+}
+
+@media (min-width: 768px) {
+  .hp-product {
+    width: 25%;
+    padding: 16px;
+    position: relative;
+    text-align:center;
+  }
+}
+
+@media (max-width: 767px) {
+  .hp-product {
+    width: 50%;
+    padding: 16px;
+    position: relative;
+    text-align:center;
+  }
+}
+
+.hp-name {
+  font-weight: 700;
+  display: block;
+  color: #000;
+}
+
+.icon-arrow-right {
+  margin-left: 1vh;
+}
+
+/* Konkurenční výhody */
+.benefit-banners-full-width {
+  text-align: center !important;
+  margin-bottom: 20px;
+}
+
+@media(max-width: 767px) {
+  .benefitBanner__item {
+    width: 45% !important;
+    display: inline-flex;
+  }
+}
+
+/* = TOP KATEGORIE = */
+.next-to-carousel-banners {
+	margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+.top-kategorie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.item-top-kategorie {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-top-kategorie {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Button top kategorie */
+.btn-top-kategorie {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFFAED;
+  padding: 8px 16px;
+  border-radius: 7px;
+  font-weight: 600;
+  color: #082359;
+  white-space: nowrap;
+}
+
+/* Hover top kategorie */
+.item-top-kategorie:hover .img-top-kategorie {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* Mobil top kategorie */
+@media (max-width: 768px) {
+  .top-kategorie {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* = PRODUKTOVÉ ŘADY = */
+.product-lines {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.product-lines-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Karty */
+.product-card {
+  max-width: 500px;
+  text-align: center;
+}
+
+.product-card h3 {
+  position: relative;
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+
+/* společná logika */
+.product-card h3::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 42px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* vlnky */
+.product-card.wipes h3::before {
+  background-image: url('https://cdn.doskocil.online/img/fbf-wipes/vlnka-zluta.svg');
+}
+
+.product-card.green h3::before {
+  background-image: url('https://cdn.doskocil.online/img/fbf-wipes/vlnka-zelena.svg');
+}
+
+/* Text */
+.product-card p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* CTA */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 26px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  border-style: none;
+}
+
+a.btn {
+  border-style: none;
+}
+
+.btn-wipes {
+  background-color: #F2B749;
+  color: #fff;
+}
+
+.btn-green {
+  background-color: #009640;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .product-lines-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* === TITLE HP === */
+/* Reviews */
+.reviews {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.reviews h2 {
+  margin-bottom: 40px;
+}
+
+.reviews-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 30px;
+}
+
+.review-item {
+  flex: 0 0 calc(50% - 15px);
+}
+
+.review-card {
+  background: #F2B749;
+  border-radius: 30px;
+  padding: 40px 30px 80px;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.review-logo {
+  max-width: 220px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.review-text {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+  color: #000;
+}
+
+.review-stars {
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-stars img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .review-item {
+    flex: 0 0 100%;
+  }
+  .review-text {
+    text-align: center;
+  }
+}
+
+/* === KATEGORIE === */
+/* Výpis produktů v kategorii */
+.columns-4 .products-block>div {
+  width: 45%;
+  margin: auto;
+  margin-bottom: 45px;
+}
+
+.product {
+  background-color: #F2F2F2;
+  border-radius: 10px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.columns-4 .products-block > .product:last-child:nth-child(odd) {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Řazení v kategorii */
+.category-header {
+  background-color: #FFF9EC;
+}
+
+/* Podkategorie */
+.subcategories li a {
+	background-color: #F2B749;
+  border-color: #F2B749;
+}
+
+/* === DETAIL PRODUKTU === */
+/* Ikony variant */
+.advanced-parameter-inner {
+  border-color: #000;
+}
+
+/* === OBECNÉ === */
+/* Text tlačítka po najetí */
+.btn.btn-cart, .btn.btn-conversion, .btn.btn-primary:hover, a.btn.btn-cart, a.btn.btn-conversion, a.btn.btn-primary:hover {
+  color: #000;
+}
+
+/* Skrytí odběru newsletterů */
+.footer-newsletter-full-width {
+  display: none;
+}
+
+/* Patička */
+#footer {
+  background-color: #F2F2F2;
+}
+
+/* Kontakty v patičce */
+.mail::before, .cellphone::before {
+	display: inline-block;
+	margin-right: 8px;
+	font-family: "shoptet";
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.mail::before {
+  content: "\e924";
+}
+
+.cellphone::before {
+  content: "\e92b";
+}
