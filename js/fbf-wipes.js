@@ -32,19 +32,25 @@ new Swiper('.reviews-wrapper', {
 });
 
 //Reviews HP
-document.addEventListener('DOMContentLoaded', function () {
-    const starContainers = document.querySelectorAll('.review-stars');
-    const starImage = 'https://cdn.doskocil.online/img/fbf-wipes/hvezda-bila.svg';
+function initStars() {
+  const starContainers = document.querySelectorAll('.review-stars');
+  const starImage = 'https://cdn.doskocil.online/img/fbf-wipes/hvezda-bila.svg';
 
-    starContainers.forEach(container => {
-      const rating = parseInt(container.dataset.rating, 10) || 0;
-      container.innerHTML = '';
+  starContainers.forEach(container => {
+    const rating = parseInt(container.dataset.rating, 10) || 0;
 
-      for (let i = 0; i < rating; i++) {
-        const img = document.createElement('img');
-        img.src = starImage;
-        img.alt = 'Hvězdička hodnocení';
-        container.appendChild(img);
-      }
-    });
+    container.innerHTML = '';
+
+    for (let i = 0; i < rating; i++) {
+      const img = document.createElement('img');
+      img.src = starImage;
+      img.alt = 'Hvězdička';
+      img.style.width = '20px';
+      img.style.height = '20px';
+      container.appendChild(img);
+    }
   });
+}
+
+document.addEventListener('DOMContentLoaded', initStars);
+window.addEventListener('load', initStars);
