@@ -30,3 +30,14 @@ new Swiper('.reviews-wrapper', {
     768: { slidesPerView: 1 }
   }
 });
+
+//Video v kategorii
+$(document).ready(function() {
+  var $products = $('#products .product');
+  var $description = $('.category__secondDescription');
+
+  if ($products.length >= 2 && $description.length) {
+    $description.addClass('full-width-banner');
+    $products.eq(1).after($description);
+  }
+});
