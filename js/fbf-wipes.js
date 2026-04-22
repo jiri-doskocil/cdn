@@ -32,25 +32,25 @@ new Swiper('.reviews-wrapper', {
 });
 
 //Reviews HP
-function initStars() {
+function initReviews() {
   const starContainers = document.querySelectorAll('.review-stars');
   const starImage = 'https://cdn.doskocil.online/img/fbf-wipes/hvezda-bila.svg';
 
   starContainers.forEach(container => {
     const rating = parseInt(container.dataset.rating, 10) || 0;
-
     container.innerHTML = '';
 
     for (let i = 0; i < rating; i++) {
       const img = document.createElement('img');
       img.src = starImage;
-      img.alt = 'Hvězdička';
-      img.style.width = '20px';
-      img.style.height = '20px';
+      img.alt = 'Hvězdička hodnocení';
       container.appendChild(img);
     }
   });
 }
 
-document.addEventListener('DOMContentLoaded', initStars);
-window.addEventListener('load', initStars);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initReviews);
+} else {
+  initReviews(); // 👉 když už DOM existuje
+}
