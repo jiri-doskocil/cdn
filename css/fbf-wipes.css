@@ -408,6 +408,29 @@ img {
   border-color: #F2B749;
 }
 
+/* Video v kategorii */
+.video-banner-wrapper {
+    max-width: 100%;
+    padding: 0;
+    background: #F8C047;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-banner {
+  display: block;
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.full-width-banner {
+  width: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
 /* === DETAIL PRODUKTU === */
 /* Ikony variant */
 .advanced-parameter-inner {
