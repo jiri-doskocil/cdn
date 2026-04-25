@@ -67,6 +67,10 @@
 	background-color: #615B2C;
 }
 
+.navigation-in ul li a {
+	padding: 2rem 15px;
+}
+
 .navigation-in ul li a b, .menu-helper>span {
   color: #D2C5B3;
   font-weight: 400;
