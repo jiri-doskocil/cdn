@@ -4,5 +4,5 @@
   <path d="M27 50H35V64H27V50Z" stroke="#F2B749" stroke-width="4" stroke-linejoin="round"/>
   <path d="M61 50H69V64H61V50Z" stroke="#F2B749" stroke-width="4" stroke-linejoin="round"/>
   <path d="M69 61C69 69 63 73 55 73H50" stroke="#F2B749" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="47" cy="73" r="2.5" fill="#F2B749"/>
+  <circle cx="47" cy="73" r="3" fill="#F2B749"/>
 </svg>
