@@ -445,3 +445,121 @@
 	content: url('https://cdn.doskocil.online/img/lovecky-obchod/address.svg');
   margin: 0px 15px 0px 0px;
 }
+
+/* ==== KATEGORIE * ==== */
+/* Sbalení podkategorií */
+.subcategories-toggle {
+  background: #615B2C;
+  border: none;
+  color: #D2C5B3;
+  cursor: pointer;
+  font-weight: 500;
+ 	padding: 5px 20px;
+  display: block;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+/* Filtrace */
+@media (min-width: 768px) {
+	.box.box-sm.box-filters {
+  	background-color: #D2C5B3;
+    border-color: #707070 !important;
+	}
+
+	.filter-section {
+  	background-color: #D2C5B3;
+	}
+  
+  .ui-slider .ui-slider-range {
+  	background-color: #FFFFFF;
+    border-color: #FFFFFF;
+  }
+  
+  .filter-count {
+  	background-color: transparent;
+  }
+}
+
+#category-filter-hover .filter-section:first-child, .filter-section+.filter-section {
+	border-top-color: #615B2C;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+	border-radius: 20px;
+}
+
+/* ==== DETAIL PRODUKTU ==== */
+/* Šířka stránky */
+@media (min-width: 768px) {
+	.wide .p-detail {
+		margin: 0 20px;
+	}
+  
+  /* Posunutí breadcrumbs */
+	.type-product .breadcrumbs {
+		width: 100%;
+		margin: 0 20px;
+	}
+}
+
+
+/* == PRODUKTOVÉ INFORMACE == */
+/* Nadpis */
+.p-detail-inner h1 {
+	color: #615B2C;
+}
+
+/* Hodnocení & značka */
+.ratings-and-brand {
+	display: block !important;
+}
+	
+.brand-wrapper {
+	margin-left: 0 !important;
+}
+
+.brand-wrapper-manufacturer-name a {
+	font-weight: 700;
+  color: #2B2A29;
+}
+
+/* Vložení do košíku */
+.p-to-cart-block {
+	background-color: #F0EBE5;
+}
+
+.p-to-cart-block .p-final-price-wrapper .price-final-holder {
+	color: #615B2C;
+  font-weight: 700;
+}
+
+/* Podrobné informace */
+.responsive-nav .shp-tabs-holder {
+	background-color: #F0EBE5;
+}
+	
+.shp-tabs-holder ul.shp-tabs {
+	margin-left: 0px;
+}
+
+.active .shp-tab-link, .shp-tab-link, .shp-tab-link:hover {
+	color: #615B2C;
+}
+
+/* Související a podobné */
+.products-header {
+	margin-bottom: 0px;
+  color: #615B2C;
+}
+
+/* Flag akce */
+.flag.default-variant, .flag.flag-discount {
+	background-color: #615B2C;
+}
+
+/* ==== OSTATNÍ STRÁNKY ==== */
+/* == ZNAČKY == */
+#content .filters.visible, #footer .filters.visible, .filter-sections {
+	background-color: #D2C5B3;
+}
