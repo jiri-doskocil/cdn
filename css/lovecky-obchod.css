@@ -347,14 +347,15 @@
 
 /* item */
 .brand-item {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 0;
 }
 
 .brand-item img {
-  max-height: 100px;
+  max-height: 50px;
   width: auto;
   display: block;
 }
@@ -562,4 +563,22 @@
 /* == ZNAČKY == */
 #content .filters.visible, #footer .filters.visible, .filter-sections {
 	background-color: #D2C5B3;
+}
+
+/* ==== MOBIL ==== */
+@media (max-width: 767px) {
+	.navigation-buttons a[data-target=navigation]:before, .navigation-buttons a[data-target=search]:before, .p-detail-inner-header-mobile .h1 {
+  	color: #615B2C;
+  }
+  
+  .navigation-in ul li a b {
+  	padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    color: #615B2C !important;
+  }
+  
+  .banner {
+  	min-height: 50px;
+    margin-bottom: 0px;
+  }
 }
