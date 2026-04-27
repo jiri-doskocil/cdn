@@ -487,6 +487,12 @@
   }
 }
 
+@media (max-width: 767px) {
+	.filter-section {
+		background-color: #FFFFFF !important;
+	}
+}
+
 #category-filter-hover .filter-section:first-child, .filter-section+.filter-section {
 	border-top-color: #615B2C;
 }
