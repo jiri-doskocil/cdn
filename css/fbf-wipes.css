@@ -51,9 +51,11 @@
   padding-top: 10px;
 }
 
-.site-name {
-  flex-grow: 0 !important;
-  display: none !important; /* Skrytí loga v hlavičce */
+@media (min-width: 768px) {
+	.site-name {
+		flex-grow: 0 !important;
+		display: none !important; /* Skrytí loga v hlavičce */
+	}
 }
 
 @media (min-width: 768px) {
