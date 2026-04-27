@@ -485,6 +485,10 @@
   .filter-count {
   	background-color: transparent;
   }
+  .ui-slider .ui-slider-range {
+  	background-color: #FFFFFF;
+    border-color: #FFFFFF;
+  }
 }
 
 @media (max-width: 767px) {
