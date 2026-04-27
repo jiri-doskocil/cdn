@@ -448,6 +448,11 @@
 }
 
 /* ==== KATEGORIE * ==== */
+/* Šířka */
+@media (min-width: 768px) {
+	category-top: max-width: 90% !important;
+}
+
 /* Sbalení podkategorií */
 .subcategories-toggle {
   background: #615B2C;
